@@ -1,6 +1,7 @@
 # Android-ProgressViewsLib
 Android library with custom Progress Bars in different shapes. 
 
+![example1](https://github.com/natasam/DemoProgressViewsLibApp/blob/master/screenshots/Screenshot_2015-12-13-17-36-48.png)![example3](https://github.com/natasam/DemoProgressViewsLibApp/blob/master/screenshots/Screenshot_2015-12-13-18-23-10.png)![example2](https://github.com/natasam/DemoProgressViewsLibApp/blob/master/screenshots/Screenshot_2015-12-13-15-56-38.png)
 ##DemoProgressViewsLibApp
 DemoProgressViewsLibApp is sample app with **progressviewslib**, Android library which is collection of custom views that represents 
 ProgressBars in different shapes. It is easy to understand, to integrate and to customize it.
