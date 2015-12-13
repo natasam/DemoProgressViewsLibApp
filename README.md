@@ -44,12 +44,15 @@ or you can add it programmatically in your class:
         circleProgressBar.setTextSize(30);
         circleProgressBar.setBackgroundColor(Color.LTGRAY);
         circleProgressBar.setProgressColor(Color.RED);
+        
          
  or you can set Linear gradient for progress with default colors or add your array of colors:
 
         circleProgressBar.setLinearGradientProgress(true);
 or
         circleProgressBar.setLinearGradientProgress(true, colors_array);
+ 
+ 
  
 you can add progress listener on every ProgressView:
 
@@ -68,11 +71,14 @@ circleProgressBar.setOnProgressViewListener(new OnProgressViewListener() {
             }
         });
         
+        
    for convenience, you can always cast them as ProgressShape:
    
    ProgressViewFactory pv = new ProgressViewFactory(this);
         ProgressShape progres = pv.getShape(ShapeType.ARC);
         addView((View) progres);
+   
+   
         
  All of them extend ProgressView class which extends View and also implements ProgressShape interface.
   So you have a lot of possibilities to use them as you wish.
