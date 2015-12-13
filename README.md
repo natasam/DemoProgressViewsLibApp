@@ -68,14 +68,16 @@ circleProgressBar.setOnProgressViewListener(new OnProgressViewListener() {
         });
         
    for convenience, you can always cast them as ProgressShape:
+   
    ProgressViewFactory pv = new ProgressViewFactory(this);
         ProgressShape progres = pv.getShape(ShapeType.ARC);
         addView((View) progres);
-  All of them extend ProgressView class which extends View and also implements ProgressShape interface.
+        
+ All of them extend ProgressView class which extends View and also implements ProgressShape interface.
   So you have a lot of possibilities to use them as you wish.
 
-   you can set all Progress views as indeterminate progress with infinite animation 
-   and speed of animation as parametar.
+ you can set all Progress views as indeterminate progress with infinite animation 
+ and speed of animation as parametar.
         progressBar.setProgressIndeterminateAnimation(2000);
  ```
   
