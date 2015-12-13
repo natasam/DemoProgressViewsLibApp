@@ -62,6 +62,7 @@ abstract class ProgressView extends View implements ProgressShape {
     private int shaderColor = getResources().getColor(R.color.shader_color);
     protected ColorsHelper colorHelper;
     protected int[] gradColors;
+    protected boolean isRoundEdge;
 
 
     abstract void init();
@@ -216,8 +217,11 @@ abstract class ProgressView extends View implements ProgressShape {
         foregroundPaint.setColor(color);
         foregroundPaint.setStyle(Paint.Style.STROKE);
         foregroundPaint.setStrokeWidth(strokeWidth);
-        if (isShadow_progress)
-            foregroundPaint.setShadowLayer(1, 2, 4, shaderColor);
+        if(isRoundEdge){
+            foregroundPaint.setStrokeCap(Paint.Cap.ROUND);
+        }
+       // if (isShadow_progress)
+            //foregroundPaint.setShadowLayer(1, 2, 4, shaderColor);
 
     }
 
@@ -230,7 +234,10 @@ abstract class ProgressView extends View implements ProgressShape {
             backgroundPaint.setShadowLayer(2, 2, 4, shaderColor);
 
     }
-
+public void setRoundEdgeProgress(boolean isRoundEdge){
+    this.isRoundEdge=isRoundEdge;
+    init();
+}
     /**
      * @return progress color from ProgressBar
      ***/

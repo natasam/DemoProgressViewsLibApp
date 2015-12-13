@@ -63,6 +63,8 @@ public class DemoActivity extends AppCompatActivity {
 
         arc_progressbar = (ArcProgressBar) findViewById(R.id.arc_progressbar);
         arc_progressbar.setLinearGradientProgress(true, colors);
+        circleProgressBar1.setRoundEdgeProgress(true);
+
 
         circleProgressBar = (CircleProgressBar) findViewById(R.id.circle_progress);
         //you can set listener for progress in every ProgressView
