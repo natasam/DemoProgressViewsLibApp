@@ -1,6 +1,7 @@
 # Android-ProgressViewsLib
 Android library with custom Progress Bars in different shapes. 
 
+![example1](https://github.com/natasam/DemoProgressViewsLibApp/blob/master/screenshots/Screenshot_2015-12-13-17-36-48.png)![example3](https://github.com/natasam/DemoProgressViewsLibApp/blob/master/screenshots/Screenshot_2015-12-13-18-23-10.png)![example2](https://github.com/natasam/DemoProgressViewsLibApp/blob/master/screenshots/Screenshot_2015-12-13-15-56-38.png)
 ##DemoProgressViewsLibApp
 DemoProgressViewsLibApp is sample app with **progressviewslib**, Android library which is collection of custom views that represents 
 ProgressBars in different shapes. It is easy to understand, to integrate and to customize it.
@@ -43,12 +44,15 @@ or you can add it programmatically in your class:
         circleProgressBar.setTextSize(30);
         circleProgressBar.setBackgroundColor(Color.LTGRAY);
         circleProgressBar.setProgressColor(Color.RED);
+        
          
  or you can set Linear gradient for progress with default colors or add your array of colors:
 
         circleProgressBar.setLinearGradientProgress(true);
 or
         circleProgressBar.setLinearGradientProgress(true, colors_array);
+ 
+ 
  
 you can add progress listener on every ProgressView:
 
@@ -67,11 +71,14 @@ circleProgressBar.setOnProgressViewListener(new OnProgressViewListener() {
             }
         });
         
+        
    for convenience, you can always cast them as ProgressShape:
    
    ProgressViewFactory pv = new ProgressViewFactory(this);
         ProgressShape progres = pv.getShape(ShapeType.ARC);
         addView((View) progres);
+   
+   
         
  All of them extend ProgressView class which extends View and also implements ProgressShape interface.
   So you have a lot of possibilities to use them as you wish.
