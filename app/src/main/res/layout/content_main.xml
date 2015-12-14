@@ -11,94 +11,96 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.natasa.demoprogressviews.MainActivity"
     tools:showIn="@layout/activity_main">
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <RelativeLayout
-        android:id="@+id/rlMain"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <com.natasa.progressviews.CircleProgressBar
-            android:id="@+id/circle_progress"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            app:bar_width="30dp"
-
-            app:progress_width="30dp" />
-
-        <com.natasa.progressviews.CircleProgressBar
-            android:id="@+id/circle_progress1"
-            android:layout_width="130dp"
-            android:layout_height="100dp"
-            android:layout_below="@+id/circle_progress"
-            android:layout_margin="20dp"
-            app:bar_width="12dp"
-
-            app:progress_color="#d3f115"
-            app:progress_width="10dp" />
-
-        <com.natasa.progressviews.LineProgressBar
-            android:id="@+id/line_progressbar"
-            android:layout_width="130dp"
-            android:layout_height="110dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignTop="@+id/circle_progress1"
-            android:layout_margin="20dp"
-            android:padding="20dp"
-            app:bar_width="15dp"
-            app:progress_color="#7a26d4"
-
-            app:progress_width="15dp"
-            android:visibility="gone" />
-
-        <com.natasa.progressviews.CircleSegmentBar
-            android:id="@+id/segment_bar"
-            android:layout_width="260dp"
-            android:layout_height="180dp"
-            android:layout_alignRight="@+id/line_progressbar"
-            android:layout_alignTop="@+id/circle_progress"
-            app:bar_width="10dp"
-            app:progress_color="#f77630"
-            app:progress_width="10dp"
-
-            android:visibility="gone" />
-
-        <com.natasa.progressviews.LineProgressBar
-            android:id="@+id/line_progressbar1"
-            android:layout_width="130dp"
-            android:layout_height="110dp"
-            android:layout_below="@+id/line_progressbar"
-            android:layout_margin="20dp"
-            android:padding="20dp"
-            app:bar_color="#b5b6b9"
-            app:bar_width="15dp"
-            app:progress_color="#d42640"
-            app:progress_width="20dp"
-            android:visibility="gone" />
-
-        <com.natasa.progressviews.ArcProgressBar
-            android:id="@+id/arc_progressbar"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_alignEnd="@+id/line_progressbar"
-            android:layout_alignRight="@+id/line_progressbar"
-            android:layout_alignTop="@+id/line_progressbar1"
-            app:bar_color="#e6df1b"
-            app:bar_width="15dp"
-            app:progress_color="#9ad426"
-            app:progress_width="20dp"
-            android:visibility="gone" />
+        android:layout_height="wrap_content">
 
         <RelativeLayout
-            android:id="@+id/rlContainer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/arc_progressbar"
-            android:layout_margin="20dp">
+            android:id="@+id/rlMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
+            <com.natasa.progressviews.CircleProgressBar
+                android:id="@+id/circle_progress"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                app:bar_width="30dp"
+
+                app:progress_width="30dp" />
+
+            <com.natasa.progressviews.CircleProgressBar
+                android:id="@+id/circle_progress1"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/circle_progress"
+                android:layout_margin="20dp"
+                app:bar_width="12dp"
+
+                app:progress_color="#d3f115"
+                app:progress_width="10dp" />
+
+            <com.natasa.progressviews.LineProgressBar
+                android:id="@+id/line_progressbar"
+                android:layout_width="130dp"
+                android:layout_height="110dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/circle_progress1"
+                android:layout_margin="20dp"
+                android:padding="20dp"
+                android:visibility="visible"
+                app:bar_width="15dp"
+
+                app:progress_color="#7a26d4"
+                app:progress_width="15dp" />
+
+            <com.natasa.progressviews.CircleSegmentBar
+                android:id="@+id/segment_bar"
+                android:layout_width="260dp"
+                android:layout_height="180dp"
+                android:layout_alignRight="@+id/line_progressbar"
+                android:layout_alignTop="@+id/circle_progress"
+                android:visibility="visible"
+                app:bar_width="10dp"
+                app:progress_color="#f77630"
+
+                app:progress_width="10dp" />
+
+            <com.natasa.progressviews.LineProgressBar
+                android:id="@+id/line_progressbar1"
+                android:layout_width="130dp"
+                android:layout_height="110dp"
+                android:layout_below="@+id/line_progressbar"
+                android:layout_margin="20dp"
+                android:padding="20dp"
+                android:visibility="visible"
+                app:bar_color="#b5b6b9"
+                app:bar_width="15dp"
+                app:progress_color="#d42640"
+                app:progress_width="20dp" />
+
+            <com.natasa.progressviews.ArcProgressBar
+                android:id="@+id/arc_progressbar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignEnd="@+id/line_progressbar"
+                android:layout_alignRight="@+id/line_progressbar"
+                android:layout_alignTop="@+id/line_progressbar1"
+                android:visibility="visible"
+                app:bar_color="#e6df1b"
+                app:bar_width="15dp"
+                app:progress_color="#9ad426"
+                app:progress_width="20dp" />
+
+            <RelativeLayout
+                android:id="@+id/rlContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/arc_progressbar"
+                android:layout_margin="20dp">
+
+            </RelativeLayout>
         </RelativeLayout>
-    </RelativeLayout>
-</ScrollView>
+    </ScrollView>
 </RelativeLayout>

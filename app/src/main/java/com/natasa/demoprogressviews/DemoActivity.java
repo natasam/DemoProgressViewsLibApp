@@ -40,7 +40,7 @@ public class DemoActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         mHandler = new Handler();
 
-        //initSegmentProgressBar();
+        initSegmentProgressBar();
 
 
         initLineProgressBar();
@@ -49,15 +49,13 @@ public class DemoActivity extends AppCompatActivity {
         circleProgressBar = (CircleProgressBar) findViewById(R.id.circle_progress);
 
 
-       // arc_progressbar = (ArcProgressBar) findViewById(R.id.arc_progressbar);
-       // arc_progressbar.setLinearGradientProgress(true, colors);
-        circleProgressBar1.setRoundEdgeProgress(true);
-
-        circleProgressBar1.setLinearGradientProgress(true, colors);
+        arc_progressbar = (ArcProgressBar) findViewById(R.id.arc_progressbar);
+        arc_progressbar.setLinearGradientProgress(true, colors);
+        circleProgressBar1.setStartPositionInDegrees(ProgressStartPoint.LEFT);
         circleProgressBar.setRoundEdgeProgress(true);
-        circleProgressBar.setTextSize(62);
-        circleProgressBar.setLinearGradientProgress(true);
-
+        circleProgressBar.setTextSize(52);
+        circleProgressBar1.setLinearGradientProgress(true);
+        circleProgressBar.setStartPositionInDegrees(90);
         //you can set listener for progress in every ProgressView
         circleProgressBar.setOnProgressViewListener(new OnProgressViewListener() {
             @Override
@@ -84,6 +82,8 @@ public class DemoActivity extends AppCompatActivity {
         lineProgressbar1 = (LineProgressBar) findViewById(R.id.line_progressbar1);
         lineProgressbar1.setLineOrientation(ProgressLineOrientation.VERTICAL);
         lineProgressbar1.setLinearGradientProgress(true);
+        lineProgressbar1.setRoundEdgeProgress(true);
+
     }
 
     private void initSegmentProgressBar() {
@@ -149,14 +149,13 @@ public class DemoActivity extends AppCompatActivity {
                             circleProgressBar1.setProgress(progress);
                             circleProgressBar1.setText("" + progress, Color.DKGRAY);
 
-                            //lineProgressbar.setProgress(progress);
-                            //lineProgressbar1.setProgress(progress);
+                            lineProgressbar.setProgress(progress);
+                            lineProgressbar1.setProgress(progress);
 
-                            //segmentBar.setProgress((float) progress);
-                            //segmentBar.setText("" + progress, 30, Color.GRAY);
+                            segmentBar.setProgress((float) progress);
+                            segmentBar.setText("" + progress, 30, Color.GRAY);
 
-                           // arc_progressbar.setProgress(progress);
-                           // arc_progressbar.setText("" + progress);
+                            arc_progressbar.setProgress(progress);
                         }
                     });
 
