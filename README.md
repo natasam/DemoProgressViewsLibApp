@@ -70,7 +70,14 @@ circleProgressBar.setOnProgressViewListener(new OnProgressViewListener() {
             }
         });
 ``` 
-        
+    set start position for CircleProgressBar progress with setStartPositionInDegrees(ProgressStartPoint position),
+    or in degrees: setStartPositionInDegrees(int degrees)
+    
+
+  set progress with rounded edges with  
+```    
+   circleProgressBar.setRoundEdgeProgress(true) 
+```    
    for convenience, you can always cast them as ProgressShape:
 ```    
    ProgressViewFactory pv = new ProgressViewFactory(this);
@@ -84,8 +91,9 @@ circleProgressBar.setOnProgressViewListener(new OnProgressViewListener() {
 
  you can set all Progress views as indeterminate progress with infinite animation 
  and speed of animation as parametar.
+ ``` 
         progressBar.setProgressIndeterminateAnimation(2000);
-
+``` 
   
 #Library
   Library is available here: https://github.com/natasam/android-progressviewslib
