@@ -1,7 +1,7 @@
 # Android-ProgressViewsLib
 Android library with custom Progress Bars in different shapes. 
 
-![example1](https://github.com/natasam/DemoProgressViewsLibApp/blob/master/screenshots/Screenshot_2015-12-13-17-36-48.png)![example3](https://github.com/natasam/DemoProgressViewsLibApp/blob/master/screenshots/Screenshot_2015-12-13-18-23-10.png)![example2](https://github.com/natasam/DemoProgressViewsLibApp/blob/master/screenshots/Screenshot_2015-12-13-15-56-38.png)
+![example1](https://github.com/natasam/DemoProgressViewsLibApp/blob/master/screenshots/Screenshot_2015-12-13-17-36-48.png)![example3](https://github.com/natasam/DemoProgressViewsLibApp/blob/master/screenshots/Screenshot_2015-12-13-18-23-10.png)![example2](https://github.com/natasam/DemoProgressViewsLibApp/blob/master/screenshots/Screenshot_2015-12-13-15-56-38.png)![example5](https://github.com/natasam/DemoProgressViewsLibApp/blob/master/screenshots/Screenshot_2015-12-14-01-12-09.png)
 ##DemoProgressViewsLibApp
 DemoProgressViewsLibApp is sample app with **progressviewslib**, Android library which is collection of custom views that represents 
 ProgressBars in different shapes. It is easy to understand, to integrate and to customize it.
@@ -31,9 +31,9 @@ Basic implementation though xml would be, for example for CircleProgressBar:
             app:progress=55
             app:progress_color="#d3f115"
             app:progress_width="10dp" />
-            
+```            
 or you can add it programmatically in your class:
- 
+``` 
  CircleProgressBar circleProgressBar = new CircleProgressBar(this);
         ((ViewGroup) findViewById(R.id.rlContainer)).addView(circleProgressBar);
         circleProgressBar.setProgress(65);
@@ -44,18 +44,17 @@ or you can add it programmatically in your class:
         circleProgressBar.setTextSize(30);
         circleProgressBar.setBackgroundColor(Color.LTGRAY);
         circleProgressBar.setProgressColor(Color.RED);
-        
+```        
          
- or you can set Linear gradient for progress with default colors or add your array of colors:
-
+set linear gradient for progress with default colors or add your array of colors:
+```
         circleProgressBar.setLinearGradientProgress(true);
 or
         circleProgressBar.setLinearGradientProgress(true, colors_array);
+```
  
- 
- 
-you can add progress listener on every ProgressView:
-
+add progress listener on every ProgressView to track progress if you want:
+```
 circleProgressBar.setOnProgressViewListener(new OnProgressViewListener() {
             @Override
             public void onFinish() {
@@ -70,23 +69,31 @@ circleProgressBar.setOnProgressViewListener(new OnProgressViewListener() {
 
             }
         });
-        
-        
+``` 
+    set start position for CircleProgressBar progress with setStartPositionInDegrees(ProgressStartPoint position),
+    or in degrees: setStartPositionInDegrees(int degrees)
+    
+
+  set progress with rounded edges with:  
+```    
+   circleProgressBar.setRoundEdgeProgress(true) 
+```    
    for convenience, you can always cast them as ProgressShape:
-   
+```    
    ProgressViewFactory pv = new ProgressViewFactory(this);
         ProgressShape progres = pv.getShape(ShapeType.ARC);
         addView((View) progres);
-   
+```    
    
         
  All of them extend ProgressView class which extends View and also implements ProgressShape interface.
   So you have a lot of possibilities to use them as you wish.
 
  you can set all Progress views as indeterminate progress with infinite animation 
- and speed of animation as parametar.
+ and speed of animation as parametar:
+ ``` 
         progressBar.setProgressIndeterminateAnimation(2000);
- ```
+``` 
   
 #Library
   Library is available here: https://github.com/natasam/android-progressviewslib
