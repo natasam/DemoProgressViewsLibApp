@@ -21,10 +21,11 @@
 
         <com.natasa.progressviews.CircleProgressBar
             android:id="@+id/circle_progress"
-            android:layout_width="130dp"
-            android:layout_height="200dp"
-            app:bar_width="15dp"
-            app:progress_width="15dp" />
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:bar_width="30dp"
+
+            app:progress_width="30dp" />
 
         <com.natasa.progressviews.CircleProgressBar
             android:id="@+id/circle_progress1"
@@ -48,7 +49,8 @@
             app:bar_width="15dp"
             app:progress_color="#7a26d4"
 
-            app:progress_width="15dp" />
+            app:progress_width="15dp"
+            android:visibility="gone" />
 
         <com.natasa.progressviews.CircleSegmentBar
             android:id="@+id/segment_bar"
@@ -60,7 +62,7 @@
             app:progress_color="#f77630"
             app:progress_width="10dp"
 
-            />
+            android:visibility="gone" />
 
         <com.natasa.progressviews.LineProgressBar
             android:id="@+id/line_progressbar1"
@@ -72,7 +74,8 @@
             app:bar_color="#b5b6b9"
             app:bar_width="15dp"
             app:progress_color="#d42640"
-            app:progress_width="20dp" />
+            app:progress_width="20dp"
+            android:visibility="gone" />
 
         <com.natasa.progressviews.ArcProgressBar
             android:id="@+id/arc_progressbar"
@@ -84,7 +87,8 @@
             app:bar_color="#e6df1b"
             app:bar_width="15dp"
             app:progress_color="#9ad426"
-            app:progress_width="20dp" />
+            app:progress_width="20dp"
+            android:visibility="gone" />
 
         <RelativeLayout
             android:id="@+id/rlContainer"

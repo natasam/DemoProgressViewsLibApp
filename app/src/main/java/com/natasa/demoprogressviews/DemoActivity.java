@@ -40,33 +40,24 @@ public class DemoActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         mHandler = new Handler();
 
-        segmentBar = (CircleSegmentBar) findViewById(R.id.segment_bar);
-        //you can set for every ProgressView width, progress background width, progress bar line width
-        segmentBar.setCircleViewPadding(2);
-        segmentBar.setWidth(250);
-        segmentBar.setWidthProgressBackground(25);
-        segmentBar.setWidthProgressBarLine(25);
-        //you can set start position for progress
-        segmentBar.setStartPositionInDegrees(ProgressStartPoint.BOTTOM);
-
-        //you can set linear gradient with default colors or to set yours colors, or sweep gradient
-        segmentBar.setLinearGradientProgress(true);
+        //initSegmentProgressBar();
 
 
-        lineProgressbar = (LineProgressBar) findViewById(R.id.line_progressbar);
-        lineProgressbar1 = (LineProgressBar) findViewById(R.id.line_progressbar1);
-        lineProgressbar1.setLineOrientation(ProgressLineOrientation.VERTICAL);
-        lineProgressbar1.setLinearGradientProgress(true);
+        initLineProgressBar();
 
         circleProgressBar1 = (CircleProgressBar) findViewById(R.id.circle_progress1);
-        segmentBar.setStartPositionInDegrees(ProgressStartPoint.LEFT);
+        circleProgressBar = (CircleProgressBar) findViewById(R.id.circle_progress);
 
-        arc_progressbar = (ArcProgressBar) findViewById(R.id.arc_progressbar);
-        arc_progressbar.setLinearGradientProgress(true, colors);
+
+       // arc_progressbar = (ArcProgressBar) findViewById(R.id.arc_progressbar);
+       // arc_progressbar.setLinearGradientProgress(true, colors);
         circleProgressBar1.setRoundEdgeProgress(true);
 
+        circleProgressBar1.setLinearGradientProgress(true, colors);
+        circleProgressBar.setRoundEdgeProgress(true);
+        circleProgressBar.setTextSize(62);
+        circleProgressBar.setLinearGradientProgress(true);
 
-        circleProgressBar = (CircleProgressBar) findViewById(R.id.circle_progress);
         //you can set listener for progress in every ProgressView
         circleProgressBar.setOnProgressViewListener(new OnProgressViewListener() {
             @Override
@@ -86,6 +77,27 @@ public class DemoActivity extends AppCompatActivity {
         addCircleView();
 
 
+    }
+
+    private void initLineProgressBar() {
+        lineProgressbar = (LineProgressBar) findViewById(R.id.line_progressbar);
+        lineProgressbar1 = (LineProgressBar) findViewById(R.id.line_progressbar1);
+        lineProgressbar1.setLineOrientation(ProgressLineOrientation.VERTICAL);
+        lineProgressbar1.setLinearGradientProgress(true);
+    }
+
+    private void initSegmentProgressBar() {
+        segmentBar = (CircleSegmentBar) findViewById(R.id.segment_bar);
+        //you can set for every ProgressView width, progress background width, progress bar line width
+        segmentBar.setCircleViewPadding(2);
+        segmentBar.setWidth(250);
+        segmentBar.setWidthProgressBackground(25);
+        segmentBar.setWidthProgressBarLine(25);
+        //you can set start position for progress
+        segmentBar.setStartPositionInDegrees(ProgressStartPoint.BOTTOM);
+
+        //you can set linear gradient with default colors or to set yours colors, or sweep gradient
+        segmentBar.setLinearGradientProgress(true);
     }
 
     //examples adding progressview programatically
@@ -137,14 +149,14 @@ public class DemoActivity extends AppCompatActivity {
                             circleProgressBar1.setProgress(progress);
                             circleProgressBar1.setText("" + progress, Color.DKGRAY);
 
-                            lineProgressbar.setProgress(progress);
-                            lineProgressbar1.setProgress(progress);
+                            //lineProgressbar.setProgress(progress);
+                            //lineProgressbar1.setProgress(progress);
 
-                            segmentBar.setProgress((float) progress);
-                            segmentBar.setText("" + progress, 30, Color.GRAY);
+                            //segmentBar.setProgress((float) progress);
+                            //segmentBar.setText("" + progress, 30, Color.GRAY);
 
-                            arc_progressbar.setProgress(progress);
-                            arc_progressbar.setText("" + progress);
+                           // arc_progressbar.setProgress(progress);
+                           // arc_progressbar.setText("" + progress);
                         }
                     });
 
