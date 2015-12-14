@@ -46,14 +46,14 @@ or you can add it programmatically in your class:
         circleProgressBar.setProgressColor(Color.RED);
 ```        
          
- or you can set Linear gradient for progress with default colors or add your array of colors:
+set linear gradient for progress with default colors or add your array of colors:
 ```
         circleProgressBar.setLinearGradientProgress(true);
 or
         circleProgressBar.setLinearGradientProgress(true, colors_array);
 ```
  
-you can add progress listener on every ProgressView:
+add progress listener on every ProgressView to track progress if you want:
 ```
 circleProgressBar.setOnProgressViewListener(new OnProgressViewListener() {
             @Override
@@ -74,7 +74,7 @@ circleProgressBar.setOnProgressViewListener(new OnProgressViewListener() {
     or in degrees: setStartPositionInDegrees(int degrees)
     
 
-  set progress with rounded edges with  
+  set progress with rounded edges with:  
 ```    
    circleProgressBar.setRoundEdgeProgress(true) 
 ```    
@@ -90,7 +90,7 @@ circleProgressBar.setOnProgressViewListener(new OnProgressViewListener() {
   So you have a lot of possibilities to use them as you wish.
 
  you can set all Progress views as indeterminate progress with infinite animation 
- and speed of animation as parametar.
+ and speed of animation as parametar:
  ``` 
         progressBar.setProgressIndeterminateAnimation(2000);
 ``` 
