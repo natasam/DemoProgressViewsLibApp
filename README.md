@@ -15,12 +15,12 @@ At the moment there are four different types:
 
 -**LineProgressBar**(vertical or horizontal)
 
-All Progress views can be easy customized by your needs, through a wide range of methods or through xml.
+All ProgressViews can be easy customized by your needs, through a wide range of methods or through xml.
 
 #Implementation
 In https://github.com/natasam/DemoProgressViewsLibApp you have example with all four views in role of ProgressBar and 
 how to customize them.
-Basic implementation though xml would be, for example for CircleProgressBar:
+Basic implementation through xml would be, for example for CircleProgressBar:
 ```
 <com.natasa.progressviews.CircleProgressBar
             android:id="@+id/circle_progress"
