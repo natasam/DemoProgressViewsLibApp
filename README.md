@@ -21,7 +21,7 @@ All ProgressViews can be easy customized by your needs, through a wide range of 
 In https://github.com/natasam/DemoProgressViewsLibApp you have example with all four views in role of ProgressBar and 
 how to customize them.
 Basic implementation through xml would be, for example for CircleProgressBar:
-```
+```xml
 <com.natasa.progressviews.CircleProgressBar
             android:id="@+id/circle_progress"
             android:layout_width="130dp"
@@ -33,7 +33,7 @@ Basic implementation through xml would be, for example for CircleProgressBar:
             app:progress_width="10dp" />
 ```            
 or you can add it programmatically in your class:
-``` 
+```java
  CircleProgressBar circleProgressBar = new CircleProgressBar(this);
         ((ViewGroup) findViewById(R.id.rlContainer)).addView(circleProgressBar);
         circleProgressBar.setProgress(65);
@@ -47,14 +47,14 @@ or you can add it programmatically in your class:
 ```        
          
 set linear gradient for progress with default colors or add your array of colors:
-```
+```java
         circleProgressBar.setLinearGradientProgress(true);
-or
+// or
         circleProgressBar.setLinearGradientProgress(true, colors_array);
 ```
  
 add progress listener on every ProgressView to track progress if you want:
-```
+```java
 circleProgressBar.setOnProgressViewListener(new OnProgressViewListener() {
             @Override
             public void onFinish() {
@@ -75,11 +75,11 @@ circleProgressBar.setOnProgressViewListener(new OnProgressViewListener() {
     
 
   set progress with rounded edges with:  
-```    
+```java   
    circleProgressBar.setRoundEdgeProgress(true) 
 ```    
    for convenience, you can always cast them as ProgressShape:
-```    
+```java 
    ProgressViewFactory pv = new ProgressViewFactory(this);
         ProgressShape progres = pv.getShape(ShapeType.ARC);
         addView((View) progres);
@@ -91,7 +91,7 @@ circleProgressBar.setOnProgressViewListener(new OnProgressViewListener() {
 
  you can set all Progress views as indeterminate progress with infinite animation 
  and speed of animation as parametar:
- ``` 
+ ```java
         progressBar.setProgressIndeterminateAnimation(2000);
 ``` 
   
