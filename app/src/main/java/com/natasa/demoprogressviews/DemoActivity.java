@@ -41,13 +41,10 @@ public class DemoActivity extends AppCompatActivity {
         mHandler = new Handler();
 
         initSegmentProgressBar();
-
-
         initLineProgressBar();
 
         circleProgressBar1 = (CircleProgressBar) findViewById(R.id.circle_progress1);
         circleProgressBar = (CircleProgressBar) findViewById(R.id.circle_progress);
-
 
         arc_progressbar = (ArcProgressBar) findViewById(R.id.arc_progressbar);
         arc_progressbar.setLinearGradientProgress(true, colors);
@@ -60,21 +57,17 @@ public class DemoActivity extends AppCompatActivity {
         circleProgressBar.setOnProgressViewListener(new OnProgressViewListener() {
             @Override
             public void onFinish() {
-                //do something on progress finish
-                circleProgressBar.setText("done!");
+                //do something when progress finished
+                circleProgressBar.setText("Done!");
                 // circleProgressBar.resetProgressBar();
             }
 
             @Override
             public void onProgressUpdate(float progress) {
                 circleProgressBar.setText("" + (int) progress);
-
             }
         });
-        // addArcProgress();
         addCircleView();
-
-
     }
 
     private void initLineProgressBar() {
@@ -83,7 +76,6 @@ public class DemoActivity extends AppCompatActivity {
         lineProgressbar1.setLineOrientation(ProgressLineOrientation.VERTICAL);
         lineProgressbar1.setLinearGradientProgress(true);
         lineProgressbar1.setRoundEdgeProgress(true);
-
     }
 
     private void initSegmentProgressBar() {
@@ -95,7 +87,6 @@ public class DemoActivity extends AppCompatActivity {
         segmentBar.setWidthProgressBarLine(25);
         //you can set start position for progress
         segmentBar.setStartPositionInDegrees(ProgressStartPoint.BOTTOM);
-
         //you can set linear gradient with default colors or to set yours colors, or sweep gradient
         segmentBar.setLinearGradientProgress(true);
     }
@@ -117,9 +108,7 @@ public class DemoActivity extends AppCompatActivity {
         cpbar.setTextSize(30);
         cpbar.setBackgroundColor(Color.LTGRAY);
         cpbar.setProgressColor(Color.RED);
-
     }
-
 
     @Override
     protected void onResume() {
@@ -131,9 +120,8 @@ public class DemoActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         mHandler.removeCallbacks(mTimer);
-
     }
-
+    
     private void setTimer() {
         mTimer = new Runnable() {
             @Override
@@ -164,6 +152,5 @@ public class DemoActivity extends AppCompatActivity {
         };
 
         mHandler.postDelayed(mTimer, 1000);
-
     }
 }
